@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Audit from "./pages/Audit";
+import Compare from "./pages/Compare";
 import ProtectedRoute from "./pages/ProtectedRoute";
 
 export default function App() {
@@ -17,6 +18,16 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Audit />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* PROTECTED COMPARE */}
+        <Route
+          path="/compare"
+          element={
+            <ProtectedRoute>
+              <Compare />
             </ProtectedRoute>
           }
         />
